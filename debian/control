@@ -1,0 +1,20 @@
+Source: ristretto
+Section: xfce
+Priority: optional
+Maintainer: Filip Danilovic <filip@openmailbox.org>
+Build-Depends: debhelper (>= 9), libexif-dev, libgtk2.0-dev,
+ libdbus-glib-1-dev, libxfce4ui-1-dev (>= 4.10.0), libglib2.0-dev (>= 2.16.0),
+ libxfconf-0-dev (>= 4.10.0), libcairo2-dev (>= 1.8.0), intltool,
+ libexo-1-dev (>= 0.8.0)
+Standards-Version: 3.9.6
+Homepage: http://goodies.xfce.org/
+Vcs-Svn: svn://svn.debian.org/pkg-xfce/goodies/trunk/ristretto/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-xfce/goodies/trunk/ristretto/
+
+Package: ristretto
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: tumbler
+Description: lightweight picture-viewer for the Xfce desktop environment
+ Ristretto is a fast and lightweight picture-viewer for the Xfce desktop
+ environment.

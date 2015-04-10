@@ -1,0 +1,28 @@
+Author: Filip Danilovic <filip@openmailbox.org>
+Description: Fix 128x128 icon dir.
+ 128px icon was getting installed in */hicolor/48x48 dir. This patch fixes that.
+
+diff -u or/Makefile.am fix/Makefile.am
+--- a/icons/128x128/Makefile.am	2015-01-18 09:14:07.000000000 +0100
++++ b/icons/128x128/Makefile.am	2015-04-10 17:10:30.374886905 +0200
+@@ -1,7 +1,7 @@
+ 
+ # Inspired by Makefile.am from the Thunar file-manager
+ 
+-iconsdir = $(datadir)/icons/hicolor/48x48/apps
++iconsdir = $(datadir)/icons/hicolor/128x128/apps
+ icons_DATA = ristretto.png
+ 	
+ 
+diff -u or/Makefile.in fix/Makefile.in
+--- a/icons/128x128/Makefile.in	2015-02-28 17:50:12.000000000 +0100
++++ b/icons/128x128/Makefile.in	2015-04-10 17:29:25.778329819 +0200
+@@ -337,7 +337,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-iconsdir = $(datadir)/icons/hicolor/48x48/apps
++iconsdir = $(datadir)/icons/hicolor/128x128/apps
+ icons_DATA = ristretto.png
+ EXTRA_DIST = $(icons_DATA)
+ all: all-am
